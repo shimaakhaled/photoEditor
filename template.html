@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Image</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image">
+            <div class="image-box">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="upload">
+                <label for="upload">Upload</label>
+                <input type="file" id="upload">
+            </div>
+        </div>
+        <div class="filters">
+            <div class="theme-icon">
+                <i class="fas fa-edit" id="edit"></i>
+            </div>
+            <div style="display: none;" id="editInImage">
+                <div class="text">
+                    <input type="number" id="size" style="padding: 5px;width:30%;" placeholder="font-size">
+                    <input type="color" id="color" style="padding: 5px;width:30%;">
+                    <input type="number" id="x" style="padding: 5px;width:20%;" placeholder="x">
+                    <input type="number" id="y" style="padding: 5px;width:20%;" placeholder="y">
+                    <input type="text" id="text" style="padding: 5px;width:50%;" placeholder="text">
+                    <input type="submit" id="btn">
+                </div>
+            </div>
+            <ul>
+
+                <li>
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="200" value="0">
+                </li>
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" step="0.1" min="0" max="1" value="0">
+                </li>
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" step="0.1" min="0" max="10" value="0">
+                </li>
+                <li>
+                    <label for="hue-rotate">Hue-Rotate</label>
+                    <input type="range" id="hue-rotate" min="0" max="360" value="0">
+                </li>
+
+                <li>
+                    <a id="download" download="true">Download</a>
+                    <span onclick="resetFilterValue()"> Reset</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- JS File -->
+    <script src="assests/js/app.js"></script>
+</body>
+
+</html>
